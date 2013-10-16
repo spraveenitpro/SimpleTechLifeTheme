@@ -2,12 +2,10 @@
 
 <div class="grid_12 omega clearfix">
 
-
+	<h1>Category: <?php single_cat_title();   ?></h1>
 	<?php if( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
-		<h3><?php the_title(); ?></h3>
-		<?php the_content(); ?>
-		<hr>
+		 <?php get_template_part( 'content', 'post' );   ?>
 
 	<?php endwhile; else: ?>
 

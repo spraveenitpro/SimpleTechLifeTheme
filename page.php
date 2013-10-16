@@ -1,18 +1,22 @@
 <?php get_header(); ?>
 
-<p>This is the page.php</p>
+<div class="grid_12 omega clearfix">
 
 
-<?php if( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
+	<?php if( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
-	<h3><?php the_title(); ?></h3>
-	<?php the_content(); ?>
-	<hr>
+		<h3><?php the_title(); ?></h3>
+		<?php the_content(); ?>
+		<hr>
 
-<?php endwhile; else: ?>
+	<?php endwhile; else: ?>
 
-	<p>There are no posts now !</p>
+		<p>There are no posts now !</p>
 
-<?php endif;   ?>
+	<?php endif;   ?>
+
+</div>
+
+<?php get_template_part( 'content', 'testimonials' );   ?>
 
 <?php get_footer(); ?>  

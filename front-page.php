@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<?php bloginfo('name'); ?>
-
+<p>This is the Front-page.php</p>
 
 
 <?php if( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
@@ -15,5 +14,7 @@
 	<p>There are no posts now !</p>
 
 <?php endif;   ?>
+
+<?php get_template_part( 'content', 'testimonials' );   ?>
 
 <?php get_footer(); ?>
